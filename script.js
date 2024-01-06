@@ -23,12 +23,11 @@ inputRef.addEventListener('keypress', function(event){
 });
 
 function fetchData(location){
-    fetch(`http://api.weatherapi.com/v1/current.json?key=2d6f9e6e554e4a02a17182421240301&q=${location}&aqi=no`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=2d6f9e6e554e4a02a17182421240301&q=${location}&aqi=no`)
         .then(res => res.json())
         .then(data => getDetails(data))
         .catch(function(e){
             console.log(e);
-            backgroundRef.style.backgroundImage.remove();
         });
 }
 
